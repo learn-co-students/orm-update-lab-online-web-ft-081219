@@ -61,18 +61,7 @@ class Student
       Student.new(result[0], result[1], result[2])
     end
 
-    # def self.find_by_name(name)
-    #   sql = <<-SQL
-    #     SELECT *
-    #     FROM students
-    #     WHERE name = ?
-    #     LIMIT 1
-    #   SQL
-
-    #   DB[:conn].execute(sql, name).map {|row| self.new_from_db(row)}.first
-    # end
-
-     def self.new_from_db(row)
+    def self.new_from_db(row)
       id = row[0]
       name = row[1]
       grade = row[2]
